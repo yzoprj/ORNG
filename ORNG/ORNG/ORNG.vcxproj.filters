@@ -30,6 +30,9 @@
     <ClInclude Include="IMutex.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="StringBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -39,6 +42,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="IMutex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StringBuffer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

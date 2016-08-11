@@ -3,8 +3,7 @@
 // 特定于项目的包含文件
 //
 
-#pragma once
-
+#pragma  once
 #include "targetver.h"
 
 #include <stdio.h>

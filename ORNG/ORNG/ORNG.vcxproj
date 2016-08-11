@@ -79,12 +79,14 @@
   <ItemGroup>
     <ClInclude Include="IMutex.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StringBuffer.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IMutex.cpp" />
     <ClCompile Include="ORNG.cpp" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="StringBuffer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
