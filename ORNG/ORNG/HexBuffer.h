@@ -27,7 +27,8 @@ public:
 	RawBuffer		getRawBuffer();
 
 protected:
-	void convert(ubyte *rawData, uint length);
+	void convert(const ubyte *rawData, uint length);
+	RawBuffer recovert(const ubyte *src, uint length);
 
 private:
 	StringBuffer sb;

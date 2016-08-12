@@ -11,12 +11,15 @@ namespace common
 
 
 
-class CommonTools
+class ByteTools
 {
 public:
 	static ushort	byteToHex(ubyte val);
-	static ubyte	hexToByte(ubyte highHex, ubyte lowHex);
-	static uint		rawArrayToHexString(u);
+	static ubyte	hexToByte(ubyte val);
+	static ubyte	twoHexToByte(ubyte highHex, ubyte lowHex);
+	static uint		rawArrayToHexString(ubyte *dst, uint maxsize, const ubyte *src, uint len);
+	static uint		hexStringToRawString(ubyte *dst, uint maxsize, const ubyte *src, uint len);
+	
 
 protected:
 	static ubyte hexCodeArray[];
