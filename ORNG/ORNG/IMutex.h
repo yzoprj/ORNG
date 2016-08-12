@@ -1,9 +1,11 @@
 
-#ifndef __IMUTEX_H__
-#define __IMUTEX_H__
+#ifndef __ORNG_IMUTEX_H__
+#define __ORNG_IMUTEX_H__
 
-namespace ORNG
+namespace orng
 {
+
+namespace common{
 
 class IMutex
 {
@@ -33,7 +35,10 @@ public:
 private:
 	IMutex& mutex;
 };
-}
+
+} // end namespace orng
+
+} // end namesapce common
 
 #endif
 

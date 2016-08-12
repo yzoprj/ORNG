@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <memory.h>
 #include <string.h>
+
+using namespace orng::common;
+
 StringBuffer::StringBuffer()
 {
 	data = NULL;

@@ -77,14 +77,21 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="common.h" />
+    <ClInclude Include="ByteTools.h" />
+    <ClInclude Include="HexBuffer.h" />
     <ClInclude Include="IMutex.h" />
+    <ClInclude Include="RawBuffer.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="StringBuffer.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ByteTools.cpp" />
+    <ClCompile Include="HexBuffer.cpp" />
     <ClCompile Include="IMutex.cpp" />
     <ClCompile Include="ORNG.cpp" />
+    <ClCompile Include="RawBuffer.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="StringBuffer.cpp" />
   </ItemGroup>

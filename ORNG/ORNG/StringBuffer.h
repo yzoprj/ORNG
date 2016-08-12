@@ -1,4 +1,13 @@
-#pragma once
+#ifndef __ORNG_STRINGBUFFER_H__
+#define __ORNG_STRINGBUFFER_H__
+
+namespace orng
+{
+
+namespace common
+{
+
+
 class  StringBuffer
 {
 public:
@@ -42,3 +51,10 @@ private:
 	int		size;
 	char	*data;
 };
+
+} // end namespace orng
+
+} // end namesapce common
+
+
+#endif
