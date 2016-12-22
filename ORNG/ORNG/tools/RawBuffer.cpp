@@ -42,6 +42,18 @@ RawBuffer::RawBuffer(ubyte *rawData, uint len)
 
 RawBuffer& RawBuffer::operator =(RawBuffer rb)
 {
+
+	if (this == &rb)
+	{
+		return *this;
+	}
+
+
+	if (length != 0)
+	{
+		clear();
+	}
+
 	length = rb.length;
 	data = new ubyte[length];
 	memcpy(data, rb.data, length);
@@ -92,4 +104,22 @@ void RawBuffer::append(ubyte *rawData, uint len)
 void RawBuffer::append(const RawBuffer &rb)
 {
 	append(rb.data, rb.length);
+}
+
+
+void RawBuffer::setRawData(ubyte *rawData, uint len)
+{
+	clear();
+
+	if (len >= 0)
+	{
+		data = new ubyte[len];
+		memcpy(data, rawData, len);
+		length = len;
+	}else
+	{
+		defaultAlloc();
+	}
+
+	
 }

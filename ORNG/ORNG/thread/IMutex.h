@@ -5,7 +5,8 @@
 namespace orng
 {
 
-namespace common{
+namespace thread
+{
 
 class IMutex
 {
@@ -18,16 +19,16 @@ public:
 };
 
 
-class GuardMutex
+class MutexGuard
 {
 public:
-	GuardMutex(IMutex &mtx)
+	MutexGuard(IMutex &mtx)
 		:mutex(mtx)
 	{
 		mutex.lock();
 	}
 
-	~GuardMutex()
+	~MutexGuard()
 	{
 		mutex.unlock();
 	}

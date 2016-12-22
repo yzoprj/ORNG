@@ -1,20 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="源文件">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="头文件">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="资源文件">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Tools">
+    <Filter Include="net">
+      <UniqueIdentifier>{447bcada-5f0e-423c-a868-37e1731f983a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net\base">
+      <UniqueIdentifier>{e76519e6-d9ad-46bc-a337-c44a26dcfad2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools">
       <UniqueIdentifier>{d2209986-b15c-4d69-8be0-76281d588e6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thread">
+      <UniqueIdentifier>{0dbf191a-162a-4fb2-9a3e-7ec4f78b38e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -22,51 +31,174 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
-      <Filter>头文件</Filter>
+      <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
-      <Filter>头文件</Filter>
+      <Filter>header</Filter>
     </ClInclude>
-    <ClInclude Include="IMutex.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="net\base\BaseSocket.h">
+      <Filter>net\base</Filter>
     </ClInclude>
-    <ClInclude Include="StringBuffer.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="net\base\InetAddress.h">
+      <Filter>net\base</Filter>
     </ClInclude>
-    <ClInclude Include="RawBuffer.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="net\base\Connector.h">
+      <Filter>net\base</Filter>
     </ClInclude>
-    <ClInclude Include="common.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="net\base\Acceptor.h">
+      <Filter>net\base</Filter>
     </ClInclude>
-    <ClInclude Include="HexBuffer.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="net\base\Connection.h">
+      <Filter>net\base</Filter>
     </ClInclude>
-    <ClInclude Include="ByteTools.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="net\base\NetCallbacks.h">
+      <Filter>net\base</Filter>
+    </ClInclude>
+    <ClInclude Include="thread\IMutex.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="thread\SyncObjects.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="thread\ThreadPool.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="thread\Thread.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="thread\Event.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="thread\Task.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="net\base\SocketChannel.h">
+      <Filter>net\base</Filter>
+    </ClInclude>
+    <ClInclude Include="net\base\ConnectionHandler.h">
+      <Filter>net\base</Filter>
+    </ClInclude>
+    <ClInclude Include="net\base\SocketHelper.h">
+      <Filter>net\base</Filter>
+    </ClInclude>
+    <ClInclude Include="net\base\SelectModel.h">
+      <Filter>net\base</Filter>
+    </ClInclude>
+    <ClInclude Include="net\base\NetCommon.h">
+      <Filter>net\base</Filter>
+    </ClInclude>
+    <ClInclude Include="net\base\SelectReactor.h">
+      <Filter>net\base</Filter>
+    </ClInclude>
+    <ClInclude Include="net\base\TimeWheel.h">
+      <Filter>net\base</Filter>
+    </ClInclude>
+    <ClInclude Include="net\base\SyncQueue.hpp">
+      <Filter>net\base</Filter>
+    </ClInclude>
+    <ClInclude Include="net\base\MessagePipe.h">
+      <Filter>net\base</Filter>
+    </ClInclude>
+    <ClInclude Include="net\base\NonBlockSocket.h">
+      <Filter>net\base</Filter>
+    </ClInclude>
+    <ClInclude Include="net\base\AsyncSocket.h">
+      <Filter>net\base</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\ByteTools.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\Common.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\HexBuffer.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\ObjectProxy.hpp">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\RawBuffer.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\StringBuffer.h">
+      <Filter>tools</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
-      <Filter>源文件</Filter>
+      <Filter>sources</Filter>
     </ClCompile>
     <ClCompile Include="ORNG.cpp">
-      <Filter>源文件</Filter>
+      <Filter>sources</Filter>
     </ClCompile>
-    <ClCompile Include="IMutex.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="net\base\BaseSocket.cpp">
+      <Filter>net\base</Filter>
     </ClCompile>
-    <ClCompile Include="StringBuffer.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="net\base\InetAddress.cpp">
+      <Filter>net\base</Filter>
     </ClCompile>
-    <ClCompile Include="RawBuffer.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="net\base\Connector.cpp">
+      <Filter>net\base</Filter>
     </ClCompile>
-    <ClCompile Include="HexBuffer.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="net\base\Acceptor.cpp">
+      <Filter>net\base</Filter>
     </ClCompile>
-    <ClCompile Include="ByteTools.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="net\base\Connection.cpp">
+      <Filter>net\base</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\SyncObjects.cpp">
+      <Filter>thread</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\IMutex.cpp">
+      <Filter>thread</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\Thread.cpp">
+      <Filter>thread</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\ThreadPool.cpp">
+      <Filter>thread</Filter>
+    </ClCompile>
+    <ClCompile Include="thread\Event.cpp">
+      <Filter>thread</Filter>
+    </ClCompile>
+    <ClCompile Include="net\base\SocketChannel.cpp">
+      <Filter>net\base</Filter>
+    </ClCompile>
+    <ClCompile Include="net\base\ConnectionHandler.cpp">
+      <Filter>net\base</Filter>
+    </ClCompile>
+    <ClCompile Include="net\base\SocketHelper.cpp">
+      <Filter>net\base</Filter>
+    </ClCompile>
+    <ClCompile Include="net\base\SelectModel.cpp">
+      <Filter>net\base</Filter>
+    </ClCompile>
+    <ClCompile Include="net\base\SelectReactor.cpp">
+      <Filter>net\base</Filter>
+    </ClCompile>
+    <ClCompile Include="net\base\TimeWheel.cpp">
+      <Filter>net\base</Filter>
+    </ClCompile>
+    <ClCompile Include="net\base\MessagePipe.cpp">
+      <Filter>net\base</Filter>
+    </ClCompile>
+    <ClCompile Include="net\base\NonBlockSocket.cpp">
+      <Filter>net\base</Filter>
+    </ClCompile>
+    <ClCompile Include="net\base\AsyncSocket.cpp">
+      <Filter>net\base</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\ByteTools.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\HexBuffer.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\RawBuffer.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\StringBuffer.cpp">
+      <Filter>tools</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

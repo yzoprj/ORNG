@@ -10,6 +10,7 @@ HexBuffer::HexBuffer(const RawBuffer & rb)
 
 HexBuffer::HexBuffer(const HexBuffer &hb)
 {
+
 	sb = hb.sb;
 }
 

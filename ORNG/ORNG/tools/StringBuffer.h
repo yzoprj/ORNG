@@ -40,7 +40,7 @@ public:
 
 	const char* getData() const {return data;}
 
-	int			getLength() { return size;}
+	int			getLength() const { return size;}
 
 protected:
 

@@ -19,7 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -54,6 +54,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -77,23 +78,64 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="common.h" />
-    <ClInclude Include="ByteTools.h" />
-    <ClInclude Include="HexBuffer.h" />
-    <ClInclude Include="IMutex.h" />
-    <ClInclude Include="RawBuffer.h" />
+    <ClInclude Include="net\base\AsyncSocket.h" />
+    <ClInclude Include="net\base\MessagePipe.h" />
+    <ClInclude Include="net\base\NetCommon.h" />
+    <ClInclude Include="net\base\ConnectionHandler.h" />
+    <ClInclude Include="net\base\Connection.h" />
+    <ClInclude Include="net\base\Acceptor.h" />
+    <ClInclude Include="net\base\Connector.h" />
+    <ClInclude Include="net\base\InetAddress.h" />
+    <ClInclude Include="net\base\BaseSocket.h" />
+    <ClInclude Include="net\base\NetCallbacks.h" />
+    <ClInclude Include="net\base\SocketChannel.h" />
+    <ClInclude Include="net\base\SocketHelper.h" />
+    <ClInclude Include="net\base\SelectModel.h" />
+    <ClInclude Include="net\base\SelectReactor.h" />
+    <ClInclude Include="net\base\NonBlockSocket.h" />
+    <ClInclude Include="tools\ObjectProxy.hpp" />
+    <ClInclude Include="net\base\SyncQueue.hpp" />
+    <ClInclude Include="thread\Event.h" />
+    <ClInclude Include="thread\SyncObjects.h" />
+    <ClInclude Include="thread\Task.h" />
+    <ClInclude Include="thread\Thread.h" />
+    <ClInclude Include="thread\ThreadPool.h" />
+    <ClInclude Include="net\base\TimeWheel.h" />
+    <ClInclude Include="tools\Common.h" />
+    <ClInclude Include="tools\ByteTools.h" />
+    <ClInclude Include="tools\HexBuffer.h" />
+    <ClInclude Include="thread\IMutex.h" />
+    <ClInclude Include="tools\RawBuffer.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="StringBuffer.h" />
+    <ClInclude Include="tools\StringBuffer.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ByteTools.cpp" />
-    <ClCompile Include="HexBuffer.cpp" />
-    <ClCompile Include="IMutex.cpp" />
+    <ClCompile Include="net\base\AsyncSocket.cpp" />
+    <ClCompile Include="net\base\MessagePipe.cpp" />
+    <ClCompile Include="net\base\ConnectionHandler.cpp" />
+    <ClCompile Include="net\base\Connection.cpp" />
+    <ClCompile Include="net\base\Acceptor.cpp" />
+    <ClCompile Include="net\base\Connector.cpp" />
+    <ClCompile Include="net\base\InetAddress.cpp" />
+    <ClCompile Include="net\base\BaseSocket.cpp" />
+    <ClCompile Include="net\base\SocketChannel.cpp" />
+    <ClCompile Include="net\base\SocketHelper.cpp" />
+    <ClCompile Include="net\base\SelectModel.cpp" />
+    <ClCompile Include="net\base\SelectReactor.cpp" />
+    <ClCompile Include="net\base\NonBlockSocket.cpp" />
+    <ClCompile Include="thread\Event.cpp" />
+    <ClCompile Include="thread\SyncObjects.cpp" />
+    <ClCompile Include="thread\Thread.cpp" />
+    <ClCompile Include="thread\ThreadPool.cpp" />
+    <ClCompile Include="net\base\TimeWheel.cpp" />
+    <ClCompile Include="tools\ByteTools.cpp" />
+    <ClCompile Include="tools\HexBuffer.cpp" />
+    <ClCompile Include="thread\IMutex.cpp" />
     <ClCompile Include="ORNG.cpp" />
-    <ClCompile Include="RawBuffer.cpp" />
+    <ClCompile Include="tools\RawBuffer.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="StringBuffer.cpp" />
+    <ClCompile Include="tools\StringBuffer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
